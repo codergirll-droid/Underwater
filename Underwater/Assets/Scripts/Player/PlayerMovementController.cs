@@ -8,7 +8,11 @@ public class PlayerMovementController : MonoBehaviour
 
     [Header("Move Variables")]
     public float moveSpeed = 6f;
-    public float moveMultiplier = 10f;
+    public static float moveMultiplier = 10f;
+    public float boostMultiplier = 1.5f;
+    float moveMultiplierOriginal;
+
+    
 
     float horizontalMovement, verticalMovement;
 
@@ -19,9 +23,10 @@ public class PlayerMovementController : MonoBehaviour
     [Header("Rotation Variables")]
     public float sensX;
     public float sensY;
+    public float rotMultiplier = 0.5f;
+
 
     float mouseX, mouseY;
-    float rotMultiplier = 0.1f;
     float xRot, yRot;
 
     private void Start()
@@ -29,17 +34,22 @@ public class PlayerMovementController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
 
+        Cursor.visible = false;
+
+        moveMultiplierOriginal = moveMultiplier;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Inputs();
         controlDrag();
         rotatePlayer();
+        boostMovement();
+
 
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -51,6 +61,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         movement();
     }
 
@@ -87,8 +98,23 @@ public class PlayerMovementController : MonoBehaviour
 
     void rotatePlayer()
     {
-        transform.rotation = Quaternion.Euler(xRot, yRot, 0);
+        //Vector3.Lerp(rb.rotation.eulerAngles, new Vector3(xRot, yRot, 0), 0.5f);
+        rb.rotation = Quaternion.Euler(xRot, yRot, 0);
+        //transform.rotation = Quaternion.Euler(xRot, yRot, 0);
+        //transform.rotation = Quaternion.Euler(xRot, yRot, 0);
+
     }
 
+    void boostMovement()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveMultiplier = moveMultiplierOriginal * boostMultiplier;
+        }
+        else
+        {
+            moveMultiplier = moveMultiplierOriginal;
+        }
+    }
 
 }

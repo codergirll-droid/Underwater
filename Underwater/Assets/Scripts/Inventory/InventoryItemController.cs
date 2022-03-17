@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,23 +8,34 @@ public class InventoryItemController : MonoBehaviour
 {
     Item item;
 
+
     public Button RemoveButton;
 
     public void RemoveItem()
     {
-        InventoryManager.Instance.RemoveItem(item);
+        Debug.Log("RemoveItem/InventoryItemController called");
 
-        Destroy(gameObject);
+        bool destroyItem = InventoryManager.Instance.RemoveItem(item);
+
+        if (destroyItem)
+        {
+            Destroy(gameObject);
+
+        }
+
+
     }
 
 
     public void AddItem(Item newItem)
     {
         item = newItem;
+
     }
 
     public void UseItem()
     {
+        Debug.Log("UseItem called, item.itemType is " + item.itemType);
 
         switch (item.itemType)
         {
@@ -34,6 +46,7 @@ public class InventoryItemController : MonoBehaviour
                 break;
             case Item.ItemType.Health:
                 //increase health 
+                Debug.Log("UseItem/Health called");
                 RemoveItem();
 
                 break;
@@ -45,6 +58,15 @@ public class InventoryItemController : MonoBehaviour
 
         }
 
+    }
+
+
+    public void updateCountofItem()
+    {
+        String num = gameObject.transform.Find("ItemCount").GetComponent<TMPro.TMP_Text>().text;
+        int numInt = Int32.Parse(num);
+        numInt--;
+        gameObject.transform.Find("ItemCount").GetComponent<TMPro.TMP_Text>().text = numInt.ToString();
     }
 
 }

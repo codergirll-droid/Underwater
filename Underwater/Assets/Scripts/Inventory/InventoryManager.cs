@@ -13,10 +13,10 @@ public class InventoryManager : MonoBehaviour
 
     public Toggle EnableRemove;
 
-    public InventoryItemController[] InventoryItems;
+    //public InventoryItemController[] InventoryItems;
 
+    List<InventoryItemController> InventoryItems = new List<InventoryItemController>();
     List<int> itemCounts = new List<int>();
-    List<Item> newList = new List<Item>();
 
 
     private void Awake()
@@ -27,21 +27,32 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        Items.Add(item);
+        //edited
+        if (!Items.Contains(item))
+        {
+            Items.Add(item);
+            itemCounts.Add(1);
+        }
+        else
+        {
+            itemCounts[Items.IndexOf(item)]++;
+        }
     }
 
     //DEBUG HERE
-    public void RemoveItem(Item item)
+    public bool RemoveItem(Item item)
     {
-        if(itemCounts[newList.IndexOf(item)] > 1)
+        if(itemCounts[Items.IndexOf(item)] > 1)
         {
-            itemCounts[newList.IndexOf(item)]--;
-            //transform.Find("ItemCount").gameObject.GetComponent<TMPro.TMP_Text>().text = itemCounts[newList.IndexOf(item)].ToString();
-            Debug.Log("Item " + item.itemName + " count is " + itemCounts[newList.IndexOf(item)]);
+            Debug.Log("RemoveItem/InventoryManager Called"); 
+            itemCounts[Items.IndexOf(item)]--;
+            Debug.Log("Item " + item.itemName + " count is " + itemCounts[Items.IndexOf(item)]);
+            return false;
         }
         else
         {
             Items.Remove(item);
+            return true;
 
         }
     }
@@ -49,30 +60,16 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
-        newList.Clear();
-        itemCounts.Clear();
-
-        foreach (var item in Items)
-        {
-            if(!newList.Contains(item))
-            {
-                newList.Add(item);
-                itemCounts.Add(1);
-            }
-            else
-            {
-                itemCounts[newList.IndexOf(item)]++;
-            }
-            
-        }
+        Debug.Log("ListItems Called");
 
         foreach (Transform item in ItemContent)
         {
             Destroy(item.gameObject);
         }
 
+        Debug.Log("items in item content is " + ItemContent.childCount);
 
-        foreach(var item in newList)
+        foreach (var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<TMPro.TMP_Text>();
@@ -82,7 +79,7 @@ public class InventoryManager : MonoBehaviour
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
-            itemCountTxt.text = itemCounts[newList.IndexOf(item)].ToString();
+            itemCountTxt.text = itemCounts[Items.IndexOf(item)].ToString();
 
 
             if (EnableRemove.isOn)
@@ -94,6 +91,8 @@ public class InventoryManager : MonoBehaviour
 
 
         SetInventoryItems();
+
+
     }
 
     public void EnableItemsRemove()
@@ -116,12 +115,31 @@ public class InventoryManager : MonoBehaviour
 
     public void SetInventoryItems()
     {
-        InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
+        InventoryItems.Clear();
 
-        for (int i = 0; i < newList.Count; i++)
+
+
+        foreach (InventoryItemController item in ItemContent.GetComponentsInChildren<InventoryItemController>())
         {
-            InventoryItems[i].AddItem(newList[i]);
+            InventoryItems.Add(item);
         }
+
+        //InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
+
+
+        for (int i = 0; i < Items.Count; i++)
+        {
+            
+            InventoryItems[i].AddItem(Items[i]);
+
+
+        }
+
+
+
     }
+
+
+
 
 }

@@ -8,7 +8,6 @@ public class InventoryItemController : MonoBehaviour
 {
     Item item;
 
-
     public Button RemoveButton;
 
     public void RemoveItem()
@@ -35,6 +34,7 @@ public class InventoryItemController : MonoBehaviour
 
     public void UseItem()
     {
+        Debug.Log("Item name is " + item);
         Debug.Log("UseItem called, item.itemType is " + item.itemType);
 
         switch (item.itemType)

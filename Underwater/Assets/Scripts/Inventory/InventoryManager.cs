@@ -13,9 +13,6 @@ public class InventoryManager : MonoBehaviour
 
     public Toggle EnableRemove;
 
-    //public InventoryItemController[] InventoryItems;
-
-    List<InventoryItemController> InventoryItems = new List<InventoryItemController>();
     List<int> itemCounts = new List<int>();
 
 
@@ -27,7 +24,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        //edited
+        
         if (!Items.Contains(item))
         {
             Items.Add(item);
@@ -38,6 +35,7 @@ public class InventoryManager : MonoBehaviour
             itemCounts[Items.IndexOf(item)]++;
         }
     }
+
 
     //DEBUG HERE
     public bool RemoveItem(Item item)
@@ -60,14 +58,12 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
-        Debug.Log("ListItems Called");
 
         foreach (Transform item in ItemContent)
         {
             Destroy(item.gameObject);
         }
 
-        Debug.Log("items in item content is " + ItemContent.childCount);
 
         foreach (var item in Items)
         {
@@ -87,10 +83,10 @@ public class InventoryManager : MonoBehaviour
                 removeButton.gameObject.SetActive(true);
             }
 
+            obj.GetComponent<InventoryItemController>().AddItem(item);
+
+
         }
-
-
-        SetInventoryItems();
 
 
     }
@@ -112,33 +108,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
-
-    public void SetInventoryItems()
-    {
-        InventoryItems.Clear();
-
-
-
-        foreach (InventoryItemController item in ItemContent.GetComponentsInChildren<InventoryItemController>())
-        {
-            InventoryItems.Add(item);
-        }
-
-        //InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
-
-
-        for (int i = 0; i < Items.Count; i++)
-        {
-            
-            InventoryItems[i].AddItem(Items[i]);
-
-
-        }
-
-
-
-    }
-
 
 
 

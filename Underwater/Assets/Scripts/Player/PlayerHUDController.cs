@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerHUDController : MonoBehaviour
 {
 
+    public static PlayerHUDController Instance;
+
     [Header("Sliders")]
     public Slider healthSlider;
     public Slider breathSlider;
@@ -22,9 +24,14 @@ public class PlayerHUDController : MonoBehaviour
 
     bool isInventoryOpen = false;
 
-    void Awake()
+    private void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
     }
+
 
     void Update()
     {

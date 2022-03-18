@@ -87,7 +87,6 @@ public class PlayerMovementController : MonoBehaviour
     void movement()
     {
         rb.AddForce(moveDirection.normalized * moveSpeed * moveMultiplier, ForceMode.Acceleration);
-
     }
 
     void controlDrag()
@@ -99,7 +98,9 @@ public class PlayerMovementController : MonoBehaviour
     void rotatePlayer()
     {
         //Vector3.Lerp(rb.rotation.eulerAngles, new Vector3(xRot, yRot, 0), 0.5f);
+        
         rb.rotation = Quaternion.Euler(xRot, yRot, 0);
+        
         //transform.rotation = Quaternion.Euler(xRot, yRot, 0);
         //transform.rotation = Quaternion.Euler(xRot, yRot, 0);
 

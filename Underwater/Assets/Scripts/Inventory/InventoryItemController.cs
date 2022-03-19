@@ -15,6 +15,7 @@ public class InventoryItemController : MonoBehaviour
         Debug.Log("RemoveItem/InventoryItemController called");
 
         bool destroyItem = InventoryManager.Instance.RemoveItem(item);
+        
 
         if (destroyItem)
         {
@@ -22,7 +23,7 @@ public class InventoryItemController : MonoBehaviour
 
         }
 
-
+        updateCountofItem();
     }
 
 
@@ -47,11 +48,13 @@ public class InventoryItemController : MonoBehaviour
             case Item.ItemType.Health:
                 //increase health 
                 Debug.Log("UseItem/Health called");
+                Player.Instance.addHealth(15);
                 RemoveItem();
 
                 break;
             case Item.ItemType.Breath:
                 //increase breath
+                Player.Instance.increaseBreath(15);
                 RemoveItem();
 
                 break;

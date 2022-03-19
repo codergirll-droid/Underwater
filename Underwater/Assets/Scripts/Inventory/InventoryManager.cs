@@ -49,6 +49,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
+            itemCounts.RemoveAt(Items.IndexOf(item));
             Items.Remove(item);
             return true;
 

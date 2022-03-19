@@ -34,9 +34,9 @@ public class PlayerMovementController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
-        Cursor.visible = false;
+        //Cursor.visible = false;
 
         moveMultiplierOriginal = moveMultiplier;
     }

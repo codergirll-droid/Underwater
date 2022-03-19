@@ -46,11 +46,12 @@ public class PlayerHUDController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I) && isInventoryOpen)
         {
+            InventoryManager.Instance.EnableRemove.isOn = false;
             Inventory.SetActive(false);
             isInventoryOpen = false;
 
-            Cursor.visible = false;
-            Cursor.lockState=  CursorLockMode.Locked;
+            //Cursor.visible = false;
+            //Cursor.lockState=  CursorLockMode.Locked;
 
         }
         else if(Input.GetKeyDown(KeyCode.I) && !isInventoryOpen)
@@ -60,8 +61,8 @@ public class PlayerHUDController : MonoBehaviour
 
             InventoryManager.Instance.ListItems();
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
 
         }
     }

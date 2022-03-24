@@ -3638,7 +3638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87bcea5ba3e7404390da6827c3bc36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  moveSpeed: 10
   boostMultiplier: 2
   sensX: 10
   sensY: 10
@@ -3703,6 +3703,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   breath: 50
+  breathDecreaseTime: 2
+  breathAmountToDecrease: 1
 --- !u!1 &285313252
 GameObject:
   m_ObjectHideFlags: 0
@@ -16774,10 +16776,12 @@ MonoBehaviour:
   canChasePlayer: 0
   chaseSpeed: 3
   turnSpeed: 5
-  timeBetweenAttacks: 0
-  sightRange: 9.6
-  attackRange: 3.66
-  runawayRange: 1.44
+  timeBetweenAttacks: 3
+  canRunAway: 0
+  runAwaySpeed: 3
+  sightRange: 9.8
+  attackRange: 7.53
+  runawayRange: 4.48
   playerInSightRange: 0
   playerInAttackRange: 0
   playerInRunawayRange: 0

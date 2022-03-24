@@ -30,6 +30,10 @@ public class Enemy : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    [Header("Runaway")]
+    public bool canRunAway;
+    public float runAwaySpeed;
+
     [Header("General Bools")]
     public float sightRange, attackRange, runawayRange;
     public bool playerInSightRange, playerInAttackRange, playerInRunawayRange;
@@ -56,12 +60,16 @@ public class Enemy : MonoBehaviour
     
         if(playerInRunawayRange) 
         {
+            canRunAway = true;
+
             canChasePlayer = false;
             canMoveToWalkpoint = false;
             RunningAway(); 
         }
         else if(playerInAttackRange)
         {
+            canRunAway = false;
+
             canChasePlayer = false;
 
             canMoveToWalkpoint = false;
@@ -69,13 +77,17 @@ public class Enemy : MonoBehaviour
         }
         else if(playerInSightRange) 
         {
+            canRunAway = false;
+
             canChasePlayer = true;
 
             canMoveToWalkpoint = false;
             ChasingPlayer(); 
         }
-        else
+        else if(!playerInAttackRange && !playerInRunawayRange && !playerInSightRange)
         {
+            canRunAway = false;
+
             canChasePlayer = false;
 
             canMoveToWalkpoint = true;
@@ -121,35 +133,74 @@ public class Enemy : MonoBehaviour
 
     void ChasingPlayer() 
     {
-        if (canChasePlayer == true)
+        Vector3 playerPosition = Player.position;
+
+        Vector3 distanceToWalkPoint = transform.position - playerPosition;
+        Quaternion lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
+
+        if (canChasePlayer == true && distanceToWalkPoint.magnitude <= sightRange)
         {
-            Vector3 playerPosition = Player.position;
-
-
-            Quaternion lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
-
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
 
             transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
 
-            Vector3 distanceToWalkPoint = transform.position - playerPosition;
-
-            if (distanceToWalkPoint.magnitude <= attackRange)
-            {
-                canChasePlayer = false;
-            }
+        }
+        else if (distanceToWalkPoint.magnitude > sightRange)
+        {
+            canChasePlayer = false;
         }
     }
 
     void AttackingPlayer() 
     {
+        
         Vector3 playerPosition = Player.position;
         Quaternion lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
+
+
+        //!SHOOT THE PLAYER WITH RAYCASTS BETWEEN ATTACK TIMES
+        shootBullet();
     }
 
-    void RunningAway() { }
+    void RunningAway() 
+    {
+        Vector3 playerPosition = Player.position;
+        Vector3 distanceToWalkPoint = transform.position - playerPosition;
+
+        Quaternion lookOnLook;
+
+        float runForMeters = runawayRange - distanceToWalkPoint.magnitude;
+
+        Vector3 goTo = transform.position + new Vector3(runForMeters, 0, runForMeters);
+
+
+        //! RUN THE OTHER WAY IF THE PLAYER GETS IN THE RUNNING AWAY AREA
+        if (canRunAway == true && distanceToWalkPoint.magnitude < runawayRange)
+        {
+            lookOnLook = Quaternion.LookRotation(playerPosition - transform.position);
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
+
+            Debug.Log("Looking away");
+
+            transform.position = Vector3.MoveTowards(transform.position, goTo, runAwaySpeed * Time.deltaTime);
+
+        }
+        else if(distanceToWalkPoint.magnitude > runawayRange)
+        {
+            canRunAway = false;
+
+            lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
+
+            Debug.Log("Looking at the player");
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
+
+        }
+    }
 
 
 
@@ -178,6 +229,7 @@ public class Enemy : MonoBehaviour
         {
             walkPointSet = false;
         }
+
     }
 
     void backToNormalRotation()
@@ -210,5 +262,32 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawSphere(transform.position, sightRange);
     }
 
+
+    void shootBullet()
+    {
+
+        if (!alreadyAttacked)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, 30))
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.red);
+                Debug.Log("Did Hit" + hit.transform.gameObject.name);
+            }
+
+            alreadyAttacked = true;
+
+            Invoke(nameof(resetAttack), timeBetweenAttacks);
+
+        }
+
+
+
+    }
+
+    void resetAttack()
+    {
+        alreadyAttacked = false;
+    }
 
 }

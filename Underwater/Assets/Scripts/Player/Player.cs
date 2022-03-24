@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
     public static Player Instance;
 
 
-    bool decreaseB = true;
+    bool decreaseB;
+
+    public float breathDecreaseTime;
+    public int breathAmountToDecrease;
 
     private void Start()
     {
@@ -41,9 +44,8 @@ public class Player : MonoBehaviour
 
         }
 
-        //StartCoroutine(decreaseBreathCoroutine());
+        decreaseBreathByDefault(breathAmountToDecrease);
 
-                
     }
 
 
@@ -81,6 +83,33 @@ public class Player : MonoBehaviour
 
     }
 
+    public void decreaseBreathByDefault(int breathValue)
+    {
+        if (!decreaseB)
+        {
+            if (breath - breathValue > 0)
+            {
+                breath -= breathValue;
+                PlayerHUDController.Instance.breathSlider.value -= breathValue;
+            }
+            else
+            {
+                breath = 0;
+                Debug.Log("Player started to lose health");
+                PlayerHUDController.Instance.breathSlider.value -= breathValue;
+
+            }
+
+
+            decreaseB = true;
+            Invoke(nameof(resetBreathDecrease), breathDecreaseTime);
+        }
+
+
+
+    }
+    
+    
     public void decreaseBreath(int breathValue)
     {
         if (breath - breathValue > 0)
@@ -97,6 +126,8 @@ public class Player : MonoBehaviour
         }
     }
 
+    
+
     public void increaseBreath(int breathValue)
     {
         if (breath + breathValue < 100)
@@ -112,15 +143,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator decreaseBreathCoroutine()
+    void resetBreathDecrease()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(2f);
-            decreaseBreath(1);
-        }
-
+        decreaseB = false;
 
     }
+
+
+
 
 }

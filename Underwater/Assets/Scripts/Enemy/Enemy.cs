@@ -8,7 +8,9 @@ public class Enemy : MonoBehaviour
     public float enemyHealth = 100f;
     public float enemyDamage = 20f;
 
-    Transform Player;
+    Transform PlayerTransform;
+
+    
 
     Transform enemyRot;
    
@@ -42,7 +44,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").transform;
+        PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         playerLayerMask = LayerMask.GetMask("playerLayerMask");
     }
     private void Start()
@@ -53,6 +55,9 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+
+
+
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerLayerMask);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayerMask);
         playerInRunawayRange = Physics.CheckSphere(transform.position, runawayRange, playerLayerMask);
@@ -97,6 +102,9 @@ public class Enemy : MonoBehaviour
     }
 
 
+
+    #region MOVEMENT AND ATTACK
+
     void Patrolling()
     {
 
@@ -119,21 +127,20 @@ public class Enemy : MonoBehaviour
 
             if (distanceToWalkPoint.magnitude < 1)
             {
-                Debug.Log("walkpointset is false");
                 walkPointSet = false;
             }
         }
-        backToNormalRotation(); 
+        backToNormalRotation();
 
-
+        
 
 
 
     }
 
-    void ChasingPlayer() 
+    void ChasingPlayer()
     {
-        Vector3 playerPosition = Player.position;
+        Vector3 playerPosition = PlayerTransform.position;
 
         Vector3 distanceToWalkPoint = transform.position - playerPosition;
         Quaternion lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
@@ -152,10 +159,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void AttackingPlayer() 
+    void AttackingPlayer()
     {
-        
-        Vector3 playerPosition = Player.position;
+
+        Vector3 playerPosition = PlayerTransform.position;
         Quaternion lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
@@ -163,11 +170,12 @@ public class Enemy : MonoBehaviour
 
         //!SHOOT THE PLAYER WITH RAYCASTS BETWEEN ATTACK TIMES
         shootBullet();
+        
     }
 
-    void RunningAway() 
+    void RunningAway()
     {
-        Vector3 playerPosition = Player.position;
+        Vector3 playerPosition = PlayerTransform.position;
         Vector3 distanceToWalkPoint = transform.position - playerPosition;
 
         Quaternion lookOnLook;
@@ -184,18 +192,16 @@ public class Enemy : MonoBehaviour
 
             transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
 
-            Debug.Log("Looking away");
 
             transform.position = Vector3.MoveTowards(transform.position, goTo, runAwaySpeed * Time.deltaTime);
 
         }
-        else if(distanceToWalkPoint.magnitude > runawayRange)
+        else if (distanceToWalkPoint.magnitude > runawayRange)
         {
             canRunAway = false;
 
             lookOnLook = Quaternion.LookRotation(transform.position - playerPosition);
 
-            Debug.Log("Looking at the player");
 
             transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime * turnSpeed);
 
@@ -206,7 +212,6 @@ public class Enemy : MonoBehaviour
 
     void SearchWalkPoint()
     {
-        Debug.Log("Searching for walkpoint");
 
         float randomX = Random.Range(-walkPointRange, walkPointRange);
         float randomY = Random.Range(-walkPointRange, walkPointRange);
@@ -214,23 +219,12 @@ public class Enemy : MonoBehaviour
 
         walkPoint = new Vector3(randomX, randomY, randomZ);
 
-        Debug.Log("walkpoint set is true");
         walkPointSet = true;
 
 
 
     }
 
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collided with" + collision.gameObject.name);
-        if (!playerInRunawayRange && !playerInAttackRange && !playerInSightRange)
-        {
-            walkPointSet = false;
-        }
-
-    }
 
     void backToNormalRotation()
     {
@@ -240,6 +234,49 @@ public class Enemy : MonoBehaviour
     }
 
 
+
+    void shootBullet()
+    {
+
+        if (!alreadyAttacked)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, 30))
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.red);
+            }
+
+            alreadyAttacked = true;
+            Player.Instance.takeDamage(5);
+
+
+            Invoke(nameof(resetAttack), timeBetweenAttacks);
+
+        }
+
+
+
+    }
+
+    void resetAttack()
+    {
+        alreadyAttacked = false;
+    }
+
+    #endregion
+
+
+    #region COLLISION
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!playerInRunawayRange && !playerInAttackRange && !playerInSightRange)
+        {
+            walkPointSet = false;
+        }
+
+    }
+
+    #endregion
 
     private void OnDrawGizmos()
     {
@@ -262,32 +299,29 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawSphere(transform.position, sightRange);
     }
 
+    #region HEALTH STATS
 
-    void shootBullet()
+    public void takeDamage(int damageValue)
     {
-
-        if (!alreadyAttacked)
+        if (enemyHealth - damageValue > 0)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, 30))
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.red);
-                Debug.Log("Did Hit" + hit.transform.gameObject.name);
-            }
-
-            alreadyAttacked = true;
-
-            Invoke(nameof(resetAttack), timeBetweenAttacks);
-
+            enemyHealth -= damageValue;
+            //! SET ENEMY UI 
+        }
+        else
+        {
+            enemyHealth = 0;
+            Destroy(this.gameObject);
         }
 
-
-
     }
 
-    void resetAttack()
-    {
-        alreadyAttacked = false;
-    }
+    #endregion
+
+
+
+
+
+
 
 }

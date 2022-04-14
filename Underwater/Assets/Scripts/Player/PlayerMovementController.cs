@@ -29,8 +29,17 @@ public class PlayerMovementController : MonoBehaviour
     float mouseX, mouseY;
     float xRot, yRot;
 
+    Vector3 playerInstantPosition;
+
+    public float floatSpeed;
+    public float floatDistance;
+    bool canFloat = false;
+    Vector3 point1, point2;
+    Vector3 target;
+
     private void Start()
     {
+        playerInstantPosition = this.transform.position;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -39,6 +48,12 @@ public class PlayerMovementController : MonoBehaviour
         //Cursor.visible = false;
 
         moveMultiplierOriginal = moveMultiplier;
+
+
+        point1 = playerInstantPosition + (Vector3.up * floatDistance);
+        point2 = playerInstantPosition - (Vector3.up * floatDistance);
+
+        target = point1;
     }
 
     // Update is called once per frame
@@ -56,6 +71,9 @@ public class PlayerMovementController : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+
+        
+        floating();
 
     }
 
@@ -86,7 +104,34 @@ public class PlayerMovementController : MonoBehaviour
 
     void movement()
     {
-        rb.AddForce(moveDirection.normalized * moveSpeed * moveMultiplier, ForceMode.Acceleration);
+
+        if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.LeftArrow) 
+            || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            canFloat = true;
+            Debug.Log("playerInstantPosition " + playerInstantPosition);
+
+        }
+
+        if (horizontalMovement != 0 || verticalMovement != 0)
+        {
+            playerInstantPosition = this.transform.position;
+            point1 = playerInstantPosition + (Vector3.up * floatDistance);
+            point2 = playerInstantPosition - (Vector3.up * floatDistance);
+            target = point1;
+
+            rb.AddForce(moveDirection.normalized * moveSpeed * moveMultiplier, ForceMode.Acceleration);
+            canFloat = false;
+
+        }
+        else if(horizontalMovement == 0 && verticalMovement == 0)
+        {
+            canFloat = true;
+            
+
+        }
+
+
     }
 
     void controlDrag()
@@ -112,10 +157,45 @@ public class PlayerMovementController : MonoBehaviour
         {
             moveMultiplier = moveMultiplierOriginal * boostMultiplier;
         }
-        else
+        else 
         {
             moveMultiplier = moveMultiplierOriginal;
         }
+    }
+
+
+
+
+
+    public void floating()
+    {
+
+        point1 = playerInstantPosition + (Vector3.up * floatDistance);
+        point2 = playerInstantPosition - (Vector3.up * floatDistance);
+
+
+        if (canFloat)
+        {
+
+            if (Vector3.Distance(transform.position, target) <= 0.2f)
+            {
+                if(target == point1)
+                {
+                    target = point2;
+                }
+                else if(target == point2)
+                {
+                    target = point1;
+                }
+
+
+            }
+
+            Debug.Log("Target is " + target);
+            transform.position = Vector3.MoveTowards(transform.position, target, floatSpeed * Time.deltaTime);
+
+        }
+
     }
 
 }

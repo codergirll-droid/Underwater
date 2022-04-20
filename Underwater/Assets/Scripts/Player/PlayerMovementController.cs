@@ -61,9 +61,8 @@ public class PlayerMovementController : MonoBehaviour
     {
 
         Inputs();
-        controlDrag();
-        rotatePlayer();
-        boostMovement();
+ 
+
 
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -72,13 +71,16 @@ public class PlayerMovementController : MonoBehaviour
             Cursor.visible = true;
         }
 
-        
-        floating();
 
     }
 
     private void FixedUpdate()
     {
+        controlDrag();
+
+        floating();
+        rotatePlayer();
+        boostMovement();
 
         movement();
     }

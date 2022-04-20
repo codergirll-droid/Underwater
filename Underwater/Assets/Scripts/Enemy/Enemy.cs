@@ -40,12 +40,15 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange, runawayRange;
     public bool playerInSightRange, playerInAttackRange, playerInRunawayRange;
 
+    Vector3 initialPos;
+
     Rigidbody rb;
 
     private void Awake()
     {
         PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         playerLayerMask = LayerMask.GetMask("playerLayerMask");
+        initialPos = transform.position;
     }
     private void Start()
     {
@@ -217,7 +220,7 @@ public class Enemy : MonoBehaviour
         float randomY = Random.Range(-walkPointRange, walkPointRange);
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPoint = new Vector3(randomX, randomY, randomZ);
+        walkPoint = new Vector3(randomX, randomY, randomZ) + initialPos;
 
         walkPointSet = true;
 

@@ -9,6 +9,18 @@ public class GameManager : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
+
+    public static GameManager Instance;
+
+
+    private void Start()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsych(sceneIndex));
@@ -30,4 +42,29 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
+
+    //to be called when player passes through a portal
+    public void saveGame()
+    {
+        SaveSystem.saveGame(Player.Instance, InventoryManager.Instance);
+
+    }
+
+    //to be called at the start of the game - aka start button will call and check and according
+    //to the things, the level and stats will be loaded
+    public void loadGame()
+    {
+        GameData data = SaveSystem.loadGame();
+
+        Player.Instance.health = data.playerHealth;
+        Player.Instance.breath = data.playerBreath;
+        Player.Instance.activeSceneIndex = data.levelSceneIndex;
+
+        InventoryManager.Instance.Items = data.Items;
+        InventoryManager.Instance.itemCounts = data.itemCounts;
+
+
+    }
+
+
 }

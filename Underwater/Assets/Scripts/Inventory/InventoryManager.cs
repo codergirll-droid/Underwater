@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
 
     public Toggle EnableRemove;
 
-    List<int> itemCounts = new List<int>();
+    public List<int> itemCounts = new List<int>();
 
 
     private void Awake()

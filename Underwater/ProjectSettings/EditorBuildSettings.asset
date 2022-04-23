@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Temple Reef LVL1.unity
+    path: Assets/Scenes/LVL1MiniFight.unity
     guid: 583104dacb8c44f409d924dbe3c75bcd
+  - enabled: 1
+    path: Assets/Scenes/LVL2Puzzle.unity
+    guid: 080ab9da4d66e8f4aa28c79a526fbd04
+  - enabled: 1
+    path: Assets/Scenes/LVL3BossFight.unity
+    guid: 2ffe7216d24c26f4f857b6608e1ee171
   m_configObjects: {}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -15,8 +16,15 @@ public class Player : MonoBehaviour
     public float breathDecreaseTime;
     public int breathAmountToDecrease;
 
+    public GameManager manager;
+
+    public int activeSceneIndex = 0;
+
     private void Start()
     {
+
+        activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
         if(Instance == null)
         {
             Instance = this;
@@ -149,7 +157,19 @@ public class Player : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("portal"))
+        {
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            activeSceneIndex = sceneIndex + 1;
+            GameManager.Instance.saveGame();
+            
+            manager.LoadLevel(activeSceneIndex);
 
+
+        }
+    }
 
 
 }

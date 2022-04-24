@@ -12922,6 +12922,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2846662264440089722, guid: 8109f3f89363e07489ef09bc78483338, type: 3}
   m_PrefabInstance: {fileID: 403841326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &404222252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404222253}
+  m_Layer: 0
+  m_Name: playerStartPos
+  m_TagString: playerStartPos
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404222253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404222252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.711445, y: 20.87, z: 6.03546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &404625237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57723,6 +57753,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
+--- !u!1 &1716712343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8952867260080622848, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
+  m_PrefabInstance: {fileID: 1716712342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1719742258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71532,6 +71567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5246138667372580059, guid: dda0e3d0b1666414ea37e83380445624, type: 3}
+      propertyPath: PlayerObj
+      value: 
+      objectReference: {fileID: 1716712343}
     - target: {fileID: 5246138667948093433, guid: dda0e3d0b1666414ea37e83380445624, type: 3}
       propertyPath: m_Camera
       value: 

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
+    public GameObject PlayerObj;
+    Transform startPlayerTransform;
 
     public static GameManager Instance;
 
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsych(sceneIndex));
+
     }
 
     IEnumerator LoadAsych(int sceneIndex)
@@ -55,7 +58,9 @@ public class GameManager : MonoBehaviour
         if (operation.isDone)
         {
             loadingScreen.SetActive(false);
-
+            startPlayerTransform = GameObject.FindGameObjectWithTag("playerStartPos").transform;
+            PlayerObj.transform.position = startPlayerTransform.position;
+            PlayerObj.transform.rotation = startPlayerTransform.rotation;
         }
 
     }

@@ -1202,6 +1202,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 577165025}
   slider: {fileID: 652976824}
   progressText: {fileID: 1303105800}
+  PlayerObj: {fileID: 0}
 --- !u!4 &160465481
 Transform:
   m_ObjectHideFlags: 0
@@ -10146,6 +10147,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06274255f25f41b40bf97546622246d4, type: 3}
+--- !u!1 &1668503735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1668503736}
+  m_Layer: 0
+  m_Name: playerStartPos
+  m_TagString: playerStartPos
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1668503736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668503735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.2, y: 20.87, z: -65.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1668836754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10443,7 +10474,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8952867259870384934, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.55
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8952867259870384934, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_AnchorMax.y

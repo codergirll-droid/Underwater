@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - portal
+  - playerStartPos
   layers:
   - Default
   - TransparentFX

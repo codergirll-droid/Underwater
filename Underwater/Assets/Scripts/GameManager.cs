@@ -18,7 +18,17 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+
+        //SET THE START POS OF PLAYER
+
+
     }
 
     public void LoadLevel(int sceneIndex)
@@ -41,6 +51,13 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+
+        if (operation.isDone)
+        {
+            loadingScreen.SetActive(false);
+
+        }
+
     }
 
     //to be called when player passes through a portal

@@ -111,7 +111,6 @@ public class PlayerMovementController : MonoBehaviour
             || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
             canFloat = true;
-            Debug.Log("playerInstantPosition " + playerInstantPosition);
 
         }
 
@@ -193,7 +192,6 @@ public class PlayerMovementController : MonoBehaviour
 
             }
 
-            Debug.Log("Target is " + target);
             transform.position = Vector3.MoveTowards(transform.position, target, floatSpeed * Time.deltaTime);
 
         }

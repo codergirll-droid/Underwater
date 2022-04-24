@@ -6419,6 +6419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 5867616239156630167, guid: beda5b8a3e48d5d4aaf2620968aeb1fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beda5b8a3e48d5d4aaf2620968aeb1fa, type: 3}
 --- !u!4 &1038442937 stripped
@@ -10439,15 +10443,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8952867259870384934, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8952867259870384934, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8952867260080622848, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952867260080622848, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8952867260080622854, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_RootOrder
@@ -10499,11 +10507,11 @@ PrefabInstance:
       objectReference: {fileID: 1759973460}
     - target: {fileID: 8952867260223414330, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8952867260223414330, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8952867261201142085, guid: f27ca6539b3b0304b99f9145ebc88df3, type: 3}
       propertyPath: m_Camera
@@ -10609,6 +10617,10 @@ PrefabInstance:
     - target: {fileID: 5246138667372580052, guid: dda0e3d0b1666414ea37e83380445624, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246138667372580052, guid: dda0e3d0b1666414ea37e83380445624, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5246138667372580058, guid: dda0e3d0b1666414ea37e83380445624, type: 3}
       propertyPath: m_RootOrder

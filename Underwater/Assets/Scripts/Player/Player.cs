@@ -12,8 +12,11 @@ public class Player : MonoBehaviour
 
 
     bool decreaseB;
+    bool decreaseH;
+    bool playerOutOfBreath = false;
 
     public float breathDecreaseTime;
+    public float healthDecreaseTime;
     public int breathAmountToDecrease;
 
     public GameManager manager;
@@ -28,6 +31,12 @@ public class Player : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+            //SET THE POSITION ACCORDING TO IT
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
 
@@ -53,6 +62,11 @@ public class Player : MonoBehaviour
         }
 
         decreaseBreathByDefault(breathAmountToDecrease);
+        if (playerOutOfBreath)
+        {
+            decreaseHealthByDefault(1);
+
+        }
 
     }
 
@@ -97,13 +111,16 @@ public class Player : MonoBehaviour
         {
             if (breath - breathValue > 0)
             {
+                playerOutOfBreath = false;
                 breath -= breathValue;
                 PlayerHUDController.Instance.breathSlider.value -= breathValue;
             }
             else
             {
+                playerOutOfBreath = true;
                 breath = 0;
                 Debug.Log("Player started to lose health");
+                //DECREASE HEALTH
                 PlayerHUDController.Instance.breathSlider.value -= breathValue;
 
             }
@@ -111,6 +128,32 @@ public class Player : MonoBehaviour
 
             decreaseB = true;
             Invoke(nameof(resetBreathDecrease), breathDecreaseTime);
+        }
+
+
+
+    }
+    public void decreaseHealthByDefault(int healthValue)
+    {
+        if (!decreaseH)
+        {
+            if (health - healthValue > 0)
+            {
+                health -= healthValue;
+                PlayerHUDController.Instance.healthSlider.value -= healthValue;
+            }
+            else
+            {
+                breath = 0;
+                Debug.Log("Player dead");
+                //KILL PLAYER
+                PlayerHUDController.Instance.healthSlider.value -= healthValue;
+
+            }
+
+
+            decreaseH = true;
+            Invoke(nameof(resetHealthDecrease), healthDecreaseTime);
         }
 
 
@@ -155,6 +198,10 @@ public class Player : MonoBehaviour
     {
         decreaseB = false;
 
+    }void resetHealthDecrease()
+    {
+        decreaseH = false;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -163,7 +210,7 @@ public class Player : MonoBehaviour
         {
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
             activeSceneIndex = sceneIndex + 1;
-            GameManager.Instance.saveGame();
+            //GameManager.Instance.saveGame();
             
             manager.LoadLevel(activeSceneIndex);
 

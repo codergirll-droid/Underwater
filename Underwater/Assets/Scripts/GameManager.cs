@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-
-    private void Start()
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -25,6 +24,25 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
+
+        //!CREATE OR GET PLAYER PREFS
+
+        if (!PlayerPrefs.HasKey("SceneIndex"))
+        {
+            PlayerPrefs.SetInt("SceneIndex", 0);
+        }
+        else
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("SceneIndex"));
+
+            StartCoroutine(playerPosCoroutine());
         }
 
 
@@ -88,5 +106,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+    IEnumerator playerPosCoroutine()
+    {
+
+        yield return new WaitForSeconds(0.001f);
+        startPlayerTransform = GameObject.FindGameObjectWithTag("playerStartPos").transform;
+        PlayerObj.transform.position = startPlayerTransform.position;
+        //PlayerObj.transform.rotation = startPlayerTransform.rotation;
+    }
 
 }

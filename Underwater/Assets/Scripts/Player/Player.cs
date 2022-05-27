@@ -210,6 +210,8 @@ public class Player : MonoBehaviour
         {
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
             activeSceneIndex = sceneIndex + 1;
+            PlayerPrefs.SetInt("SceneIndex", activeSceneIndex);
+            //!SET PLAYER PREFS
             //GameManager.Instance.saveGame();
             
             manager.LoadLevel(activeSceneIndex);

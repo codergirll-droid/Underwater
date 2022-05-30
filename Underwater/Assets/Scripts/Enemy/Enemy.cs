@@ -318,6 +318,8 @@ public class Enemy : MonoBehaviour
         {
             enemyHealth -= damageValue;
             //! SET ENEMY UI 
+            EnemyUIController.Instance.healthSlider.value -= damageValue;
+
             Debug.Log("Enemy heallth is " + enemyHealth);
         }
         else

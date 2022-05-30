@@ -31,6 +31,9 @@ public class Enemy : MonoBehaviour
     [Header("Attack")]
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public GameObject enemyBullet;
+    public Transform enemyBulletPoint;
+    float enemyBulletSpeed = 50;
 
     [Header("Runaway")]
     public bool canRunAway;
@@ -243,14 +246,19 @@ public class Enemy : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+            /*
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, 30))
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.red);
             }
+            */
 
             alreadyAttacked = true;
-            Player.Instance.takeDamage(5);
+            //Player.Instance.takeDamage(5);
+            GameObject b = Instantiate(enemyBullet, enemyBulletPoint.position, enemyBulletPoint.rotation);
+            b.GetComponent<Rigidbody>().velocity = -enemyBulletPoint.forward * enemyBulletSpeed;
+            Destroy(b, 4f);
 
 
             Invoke(nameof(resetAttack), timeBetweenAttacks);

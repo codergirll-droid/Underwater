@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public float breathDecreaseTime;
     public float healthDecreaseTime;
     public int breathAmountToDecrease;
+    bool increaseBreathCont;
 
     public GameManager manager;
 
@@ -204,11 +205,16 @@ public class Player : MonoBehaviour
         }
     }
 
+
+
+
+
     void resetBreathDecrease()
     {
         decreaseB = false;
 
-    }void resetHealthDecrease()
+    }
+    void resetHealthDecrease()
     {
         decreaseH = false;
 
@@ -236,4 +242,75 @@ public class Player : MonoBehaviour
         b.GetComponent<Rigidbody>().velocity = bulletPoint.forward * bulletSpeed;
         Destroy(b, 4f);
     }
+
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("breath"))
+        {
+            StartCoroutine(increaseHealthContinuously(4));
+
+        }
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("breath"))
+        {
+            decreaseB = false;
+        }
+    }
+
+    
+    
+
+    IEnumerator increaseHealthContinuously(int healthValue)
+    {
+        if (!increaseBreathCont)
+        {
+            decreaseB = true;
+
+            increaseBreathCont = true;
+
+            if (health < 100)
+            {
+                health += healthValue;
+                PlayerHUDController.Instance.healthSlider.value += healthValue;
+                
+                breath += healthValue;
+                PlayerHUDController.Instance.breathSlider.value += healthValue;
+
+
+            }
+            if(health >= 100)
+            {
+                health = 100;
+                PlayerHUDController.Instance.healthSlider.value = health;
+
+            }
+            if(breath < 100)
+            {
+                breath += healthValue;
+                PlayerHUDController.Instance.breathSlider.value += healthValue;
+            }
+            if (breath >= 100)
+            {
+                breath = 100;
+                PlayerHUDController.Instance.breathSlider.value = breath;
+
+            }
+
+
+        Invoke(nameof(resetHealthIncreaseCont), 1f);
+
+            yield return null;
+        }
+        
+    }
+
+    void resetHealthIncreaseCont()
+    {
+        increaseBreathCont = false;
+
+    }
+
 }

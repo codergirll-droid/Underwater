@@ -310,10 +310,13 @@ public class Enemy : MonoBehaviour
         {
             enemyHealth -= damageValue;
             //! SET ENEMY UI 
+            Debug.Log("Enemy heallth is " + enemyHealth);
         }
         else
         {
             enemyHealth = 0;
+            Debug.Log("Enemy died");
+
             Destroy(this.gameObject);
         }
 

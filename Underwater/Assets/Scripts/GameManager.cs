@@ -115,4 +115,11 @@ public class GameManager : MonoBehaviour
         //PlayerObj.transform.rotation = startPlayerTransform.rotation;
     }
 
+    public void resetGameBtn()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+        StartCoroutine(playerPosCoroutine());
+    }
+
 }

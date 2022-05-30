@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
 
     public int activeSceneIndex = 0;
 
+    public GameObject bullet;
+    public Transform bulletPoint;
+
+    float bulletSpeed = 50;
+
     private void Start()
     {
 
@@ -66,6 +71,11 @@ public class Player : MonoBehaviour
         {
             decreaseHealthByDefault(1);
 
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
         }
 
     }
@@ -220,5 +230,10 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    void Shoot()
+    {
+        GameObject b = Instantiate(bullet, bulletPoint.position, bulletPoint.rotation);
+        b.GetComponent<Rigidbody>().velocity = bulletPoint.forward * bulletSpeed;
+        Destroy(b, 4f);
+    }
 }

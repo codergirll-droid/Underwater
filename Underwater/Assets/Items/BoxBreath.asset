@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 1
   itemName: BreathBox
   value: 0
-  icon: {fileID: 21300110, guid: 7a90fcdada22c9b429479d5933a03692, type: 3}
+  icon: {fileID: 21300136, guid: 7a90fcdada22c9b429479d5933a03692, type: 3}
   itemType: 2

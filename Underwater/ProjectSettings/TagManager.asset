@@ -9,6 +9,7 @@ TagManager:
   - playerStartPos
   - enemy
   - breath
+  - box
   layers:
   - Default
   - TransparentFX

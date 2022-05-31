@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EnemyUIController : MonoBehaviour
 {
 
-    public static EnemyUIController Instance;
 
     [Header("Sliders")]
     public Slider healthSlider;
@@ -19,10 +18,7 @@ public class EnemyUIController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+
 
     }
 

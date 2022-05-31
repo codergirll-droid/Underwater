@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - breath
   - box
+  - puzzle
   layers:
   - Default
   - TransparentFX

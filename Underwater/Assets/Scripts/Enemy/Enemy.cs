@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -46,6 +47,8 @@ public class Enemy : MonoBehaviour
     Vector3 initialPos;
 
     Rigidbody rb;
+
+    public GameObject dieEffect;
 
     private void Awake()
     {
@@ -318,7 +321,7 @@ public class Enemy : MonoBehaviour
         {
             enemyHealth -= damageValue;
             //! SET ENEMY UI 
-            EnemyUIController.Instance.healthSlider.value -= damageValue;
+            gameObject.GetComponent<EnemyUIController>().healthSlider.value -= damageValue;
 
             Debug.Log("Enemy heallth is " + enemyHealth);
         }
@@ -326,8 +329,18 @@ public class Enemy : MonoBehaviour
         {
             enemyHealth = 0;
             Debug.Log("Enemy died");
+            if(SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                GameManager.Instance.isBossKilled = true;
+            }
+            else
+            {
+                GameManager.Instance.killedEnemyNumber++;
 
-            Destroy(this.gameObject);
+            }
+            dieEffect.SetActive(true);
+
+            Destroy(this.gameObject, 0.2f);
         }
 
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class puzzleManager : MonoBehaviour
 {
@@ -34,6 +35,15 @@ public class puzzleManager : MonoBehaviour
         if(boxCount == currentBoxCount)
         {
             Debug.Log("Puzzle solved");
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(3).gameObject.SetActive(true);
+            GameObject.FindGameObjectWithTag("Player").transform.position += new Vector3(10, 10, 10);
+
+            GameManager.Instance.isPuzzleSolved = true;
+            SceneManager.LoadScene(1);
+            
+
+            
+            //open portal
         }
     }
 }

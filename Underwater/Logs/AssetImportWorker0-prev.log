@@ -15,11 +15,11 @@ C:/Users/hp/Desktop/Underwater/Underwater
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62777
+61244
 Successfully changed project path to: C:/Users/hp/Desktop/Underwater/Underwater
 C:/Users/hp/Desktop/Underwater/Underwater
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 368.23 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 408.84 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -42,607 +42,88 @@ Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,susp
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.020711 seconds.
+Registered in 0.009105 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 246.53 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 357.09 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.524 seconds
+- Completed reload, in  2.408 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2525ms)
-		BeginReloadAssembly (272ms)
+	ReloadAssembly (2409ms)
+		BeginReloadAssembly (216ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1893ms)
-			LoadAssemblies (263ms)
+		EndReloadAssembly (1960ms)
+			LoadAssemblies (209ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (678ms)
+			SetupTypeCache (572ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (194ms)
-			SetupLoadedEditorAssemblies (593ms)
+			RebuildScriptCaches (203ms)
+			SetupLoadedEditorAssemblies (748ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (23ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (247ms)
-				BeforeProcessingInitializeOnLoad (36ms)
-				ProcessInitializeOnLoadAttributes (207ms)
-				ProcessInitializeOnLoadMethodAttributes (86ms)
+				RefreshPlugins (357ms)
+				BeforeProcessingInitializeOnLoad (33ms)
+				ProcessInitializeOnLoadAttributes (208ms)
+				ProcessInitializeOnLoadMethodAttributes (124ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.028569 seconds.
+Registered in 0.057179 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 193.01 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 260.59 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.925 seconds
+- Completed reload, in  4.339 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3928ms)
-		BeginReloadAssembly (392ms)
+	ReloadAssembly (4342ms)
+		BeginReloadAssembly (516ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
+			DisableScriptedObjects (16ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (3377ms)
-			LoadAssemblies (334ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (3609ms)
+			LoadAssemblies (363ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1295ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (134ms)
-			SetupLoadedEditorAssemblies (1220ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (193ms)
-				BeforeProcessingInitializeOnLoad (234ms)
-				ProcessInitializeOnLoadAttributes (699ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
-				AfterProcessingInitializeOnLoad (40ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
-Refreshing native plugins compatible for Editor in 3.69 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3487 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 183.6 MB.
-System memory in use after: 183.8 MB.
-
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3964.
-Total: 22.610000 ms (FindLiveObjects: 1.322600 ms CreateObjectMapping: 0.464200 ms MarkObjects: 19.452800 ms  DeleteObjects: 1.360600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/bullet.cs
-  artifactKey: Guid(52abb7eef054ce546ac89e2119ad179e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/bullet.cs using Guid(52abb7eef054ce546ac89e2119ad179e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afeacd589be965f3641096f4229fe47f') in 0.124979 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.958852 seconds.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ee2558db51b86640683a6bc6ab5457') in 0.135773 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.029306 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 3.54 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.952 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4954ms)
-		BeginReloadAssembly (533ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (29ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (200ms)
-		EndReloadAssembly (4220ms)
-			LoadAssemblies (340ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1128ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (208ms)
-			SetupLoadedEditorAssemblies (2035ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (693ms)
-				ProcessInitializeOnLoadAttributes (1265ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
-				AfterProcessingInitializeOnLoad (20ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.37 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 172.0 MB.
-System memory in use after: 172.2 MB.
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3966.
-Total: 18.621200 ms (FindLiveObjects: 0.795700 ms CreateObjectMapping: 0.594200 ms MarkObjects: 17.112400 ms  DeleteObjects: 0.115300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.024978 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.89 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  5.718 seconds
-Domain Reload Profiling:
-	ReloadAssembly (5719ms)
-		BeginReloadAssembly (476ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (20ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (146ms)
-		EndReloadAssembly (4867ms)
-			LoadAssemblies (497ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1737ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (205ms)
-			SetupLoadedEditorAssemblies (1924ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (20ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (556ms)
-				ProcessInitializeOnLoadAttributes (1275ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (34ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.85 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 172.0 MB.
-System memory in use after: 172.3 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3968.
-Total: 26.063000 ms (FindLiveObjects: 0.976800 ms CreateObjectMapping: 0.740000 ms MarkObjects: 24.199400 ms  DeleteObjects: 0.142700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 396.902238 seconds.
-  path: Assets/Prefabs/LevelLoader.prefab
-  artifactKey: Guid(5ac155566d9085a4885f18f18074d3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/LevelLoader.prefab using Guid(5ac155566d9085a4885f18f18074d3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba8d3868b098c79768a92677ac2ae97f') in 0.139980 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000902 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(f27ca6539b3b0304b99f9145ebc88df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(f27ca6539b3b0304b99f9145ebc88df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3ef29595b42ad51f241b6944bfe4ba') in 0.432228 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.510824 seconds.
-  path: Assets/Prefabs/bulletPrefab.prefab
-  artifactKey: Guid(1f040e08fe7cd314ab29b90a74c3a99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/bulletPrefab.prefab using Guid(1f040e08fe7cd314ab29b90a74c3a99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93debfe0fee14ab79b0f467ed7748eee') in 0.220003 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.036802 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(f27ca6539b3b0304b99f9145ebc88df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(f27ca6539b3b0304b99f9145ebc88df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f50e95a07e342e6be021e95a5619508') in 0.097697 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 41.309698 seconds.
-  path: Assets/Prefabs/bulletPrefab.prefab
-  artifactKey: Guid(1f040e08fe7cd314ab29b90a74c3a99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/bulletPrefab.prefab using Guid(1f040e08fe7cd314ab29b90a74c3a99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a83d0658f651d36f3d191ba8eb3a632') in 0.048778 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018729 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.72 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.598 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4600ms)
-		BeginReloadAssembly (430ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (118ms)
-		EndReloadAssembly (3999ms)
-			LoadAssemblies (444ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1632ms)
-			ReleaseScriptCaches (6ms)
-			RebuildScriptCaches (301ms)
-			SetupLoadedEditorAssemblies (1106ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (234ms)
-				ProcessInitializeOnLoadAttributes (784ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
-				AfterProcessingInitializeOnLoad (37ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (29ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.25 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.4 MB.
-
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3980.
-Total: 15.808300 ms (FindLiveObjects: 0.898000 ms CreateObjectMapping: 0.509400 ms MarkObjects: 14.286700 ms  DeleteObjects: 0.111200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.025935 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.60 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.421 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4422ms)
-		BeginReloadAssembly (641ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (24ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (157ms)
-		EndReloadAssembly (3408ms)
-			LoadAssemblies (617ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1058ms)
-			ReleaseScriptCaches (5ms)
-			RebuildScriptCaches (273ms)
-			SetupLoadedEditorAssemblies (1186ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (340ms)
-				ProcessInitializeOnLoadAttributes (769ms)
-				ProcessInitializeOnLoadMethodAttributes (31ms)
-				AfterProcessingInitializeOnLoad (29ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.35 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.4 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3982.
-Total: 7.359100 ms (FindLiveObjects: 0.650700 ms CreateObjectMapping: 0.566100 ms MarkObjects: 6.084100 ms  DeleteObjects: 0.056200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 127.511330 seconds.
-  path: Assets/Prefabs/bulletPrefab.prefab
-  artifactKey: Guid(1f040e08fe7cd314ab29b90a74c3a99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/bulletPrefab.prefab using Guid(1f040e08fe7cd314ab29b90a74c3a99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba32f92a2d73aaa44fdfca8199e6ec63') in 0.248106 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.019766 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 3.63 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.547 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4548ms)
-		BeginReloadAssembly (467ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (115ms)
-		EndReloadAssembly (3857ms)
-			LoadAssemblies (438ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1209ms)
-			ReleaseScriptCaches (7ms)
-			RebuildScriptCaches (285ms)
-			SetupLoadedEditorAssemblies (1603ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (615ms)
-				ProcessInitializeOnLoadAttributes (904ms)
-				ProcessInitializeOnLoadMethodAttributes (26ms)
-				AfterProcessingInitializeOnLoad (27ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (17ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.63 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3985.
-Total: 7.596400 ms (FindLiveObjects: 0.502800 ms CreateObjectMapping: 0.453800 ms MarkObjects: 6.557800 ms  DeleteObjects: 0.079400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.025867 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.60 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.090 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4092ms)
-		BeginReloadAssembly (481ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (23ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (179ms)
-		EndReloadAssembly (3452ms)
-			LoadAssemblies (325ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1234ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (135ms)
-			SetupLoadedEditorAssemblies (1496ms)
+			SetupTypeCache (1374ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (182ms)
+			SetupLoadedEditorAssemblies (1328ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (485ms)
-				ProcessInitializeOnLoadAttributes (924ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (45ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (34ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.79 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3987.
-Total: 25.445800 ms (FindLiveObjects: 1.513900 ms CreateObjectMapping: 0.869700 ms MarkObjects: 22.937700 ms  DeleteObjects: 0.119800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.021900 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.21 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.794 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3795ms)
-		BeginReloadAssembly (349ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (81ms)
-		EndReloadAssembly (3164ms)
-			LoadAssemblies (458ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1250ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (182ms)
-			SetupLoadedEditorAssemblies (951ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (282ms)
-				ProcessInitializeOnLoadAttributes (610ms)
+				RefreshPlugins (261ms)
+				BeforeProcessingInitializeOnLoad (276ms)
+				ProcessInitializeOnLoadAttributes (735ms)
 				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (22ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3989.
-Total: 7.121100 ms (FindLiveObjects: 0.623900 ms CreateObjectMapping: 0.386900 ms MarkObjects: 6.061200 ms  DeleteObjects: 0.047400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.182359 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.25 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in 10.273 seconds
-Domain Reload Profiling:
-	ReloadAssembly (10277ms)
-		BeginReloadAssembly (2215ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (98ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (526ms)
-		EndReloadAssembly (7727ms)
-			LoadAssemblies (1419ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (4261ms)
-			ReleaseScriptCaches (21ms)
-			RebuildScriptCaches (1118ms)
-			SetupLoadedEditorAssemblies (921ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (306ms)
-				ProcessInitializeOnLoadAttributes (552ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
-				AfterProcessingInitializeOnLoad (24ms)
+				AfterProcessingInitializeOnLoad (25ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (15ms)
 Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
+========================================================================
+Worker process is ready to serve import requests
 Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.44 ms, found 5 plugins.
+Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.17 seconds
+Refreshing native plugins compatible for Editor in 3.40 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.5 MB.
+Unloading 3534 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 185.1 MB.
+System memory in use after: 185.3 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3991.
-Total: 17.666300 ms (FindLiveObjects: 0.689700 ms CreateObjectMapping: 0.487600 ms MarkObjects: 16.412000 ms  DeleteObjects: 0.074700 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 4011.
+Total: 12.744100 ms (FindLiveObjects: 0.596000 ms CreateObjectMapping: 0.677900 ms MarkObjects: 10.578600 ms  DeleteObjects: 0.888300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -656,412 +137,387 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 253.892803 seconds.
-  path: Assets/Scripts/Enemy/Enemy.cs
-  artifactKey: Guid(c728600a2517f0145a2c52de2854117c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Enemy/Enemy.cs using Guid(c728600a2517f0145a2c52de2854117c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48a8cd17a6bf3f80af8befaf474923ca') in 0.042655 seconds 
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall2.prefab
+  artifactKey: Guid(4231a198856fde244852dd542a0b0cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall2.prefab using Guid(4231a198856fde244852dd542a0b0cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ef3bbf697342cdf1f5fc348b7bac29e') in 0.452380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001340 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/RuneOfMagic.prefab
+  artifactKey: Guid(ab8125ffea4d43e4aa9439d5f8fff4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/RuneOfMagic.prefab using Guid(ab8125ffea4d43e4aa9439d5f8fff4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203eb7b2ed437e0b2e09cb8ee561e33d') in 0.050054 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000560 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai3.prefab
+  artifactKey: Guid(48dfdee99b415924b9bc9473c8ab3be8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai3.prefab using Guid(48dfdee99b415924b9bc9473c8ab3be8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750ac606b121181f70709e2c19e4576d') in 0.040007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000549 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/DeadBall.prefab
+  artifactKey: Guid(537a18d45863c794c97e81b7bc643e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/DeadBall.prefab using Guid(537a18d45863c794c97e81b7bc643e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a44a363354543409f7302ad8a0e7353') in 0.043716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai.prefab
+  artifactKey: Guid(3fb31ce22fa348f49a27f87a5b0adcbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai.prefab using Guid(3fb31ce22fa348f49a27f87a5b0adcbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83f30bf832b23f36307b0c339469433d') in 0.035017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000509 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode8.prefab
+  artifactKey: Guid(be7d9c7b953f9b143861af17cf32d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode8.prefab using Guid(be7d9c7b953f9b143861af17cf32d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a802d9d8350f8203189b12675638d81') in 0.044652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000631 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall.prefab
+  artifactKey: Guid(9826389809c2e1e41a1125953a56a236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall.prefab using Guid(9826389809c2e1e41a1125953a56a236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd986113340f9a2f71107454b22ec1b9d') in 0.053204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000627 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/IceBall.prefab
+  artifactKey: Guid(4a208ba3b61f6e24595fe9f17926de8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/IceBall.prefab using Guid(4a208ba3b61f6e24595fe9f17926de8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c582fed0782377e9958701a7d4f28e8a') in 0.049736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000934 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode7.prefab
+  artifactKey: Guid(ba4d2d4d346b55a4da5ee8548c8c5609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode7.prefab using Guid(ba4d2d4d346b55a4da5ee8548c8c5609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b70c01ca21450615a400d06daf54b53e') in 0.054246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000663 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/StormCloud.prefab
+  artifactKey: Guid(fbe02a07d24e2ce43b8e224ebcf00316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/StormCloud.prefab using Guid(fbe02a07d24e2ce43b8e224ebcf00316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95fb10fd6f3152af0ca87328c2ed7a16') in 0.054586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000607 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/MagicCube.prefab
+  artifactKey: Guid(2c39fb930164bbd47b1b317081d8661d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/MagicCube.prefab using Guid(2c39fb930164bbd47b1b317081d8661d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9967db5feea87a99c566abd68a0115a5') in 0.062563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000603 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LigthningArrow.prefab
+  artifactKey: Guid(f668eb933cc5b2b4385c78d3cf3c4f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LigthningArrow.prefab using Guid(f668eb933cc5b2b4385c78d3cf3c4f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9af84250c5040841a6f4958c08865f1c') in 0.050239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000590 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LightningRotateBall.prefab
+  artifactKey: Guid(9c001e713c3ebd34b9a93ba39ccdb2c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LightningRotateBall.prefab using Guid(9c001e713c3ebd34b9a93ba39ccdb2c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6cae40317edfe06dbb2f798a2a67397') in 0.066186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000644 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/BlueBall.prefab
+  artifactKey: Guid(4248ba95366d5904686c308a47794818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/BlueBall.prefab using Guid(4248ba95366d5904686c308a47794818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa815eab321ffd5f244cc1463519dd2') in 0.057317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000628 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalArrow2.prefab
+  artifactKey: Guid(a8d60f6853b51ee4ba75f1966f4f358f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalArrow2.prefab using Guid(a8d60f6853b51ee4ba75f1966f4f358f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7421fd86cf1b61f49b5815470c1e47db') in 0.054903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000610 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall3.prefab
+  artifactKey: Guid(9a8672522358ff943a1a236cd32e1302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall3.prefab using Guid(9a8672522358ff943a1a236cd32e1302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '082a2d5e84bc56d7d9a76a953c818fb0') in 0.051034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001170 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SummonMagicCircle3.prefab
+  artifactKey: Guid(bf73c6d90c4e0634ba969c77df2d9b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SummonMagicCircle3.prefab using Guid(bf73c6d90c4e0634ba969c77df2d9b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf68b00433d697688eb47ea58a91ca2') in 0.049524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000950 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SwampBall.prefab
+  artifactKey: Guid(bc015426619ef584fbdac5a0359c7a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SwampBall.prefab using Guid(bc015426619ef584fbdac5a0359c7a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408e696b191072054ff4ad0d7f1002e5') in 0.059714 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000670 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode5.prefab
+  artifactKey: Guid(176c17a1cb4e96d4c918b4636a95b8c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode5.prefab using Guid(176c17a1cb4e96d4c918b4636a95b8c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af3009f3091b50c19232c54e5bdfc95') in 0.064200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000617 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode11.prefab
+  artifactKey: Guid(196ff0dbab9ba0d4697ff8df1cebaf6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode11.prefab using Guid(196ff0dbab9ba0d4697ff8df1cebaf6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df05a89a43fe8a318139eee1711e0c6') in 0.045688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000494 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/FireBall.prefab
+  artifactKey: Guid(6ff1350c2a91520479532984ca642474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/FireBall.prefab using Guid(6ff1350c2a91520479532984ca642474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c49b493f14c5c4a90a9f6df8ff6d4f') in 0.045751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000462 seconds.
+  path: Assets/52SpecialEffectPack/Effect
+  artifactKey: Guid(fd74533eee6aaee48aae7ca1d5b64026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect using Guid(fd74533eee6aaee48aae7ca1d5b64026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0bd028cc6c4fe020387f3cddd21f661') in 0.010427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000505 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode9.prefab
+  artifactKey: Guid(450dff828997cdd4c864f611df7d62d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode9.prefab using Guid(450dff828997cdd4c864f611df7d62d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9752810cec523b5040772ae2a861daf') in 0.043090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000899 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Swamp.prefab
+  artifactKey: Guid(1fc7dfffb398d0b48b056795e222cbc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Swamp.prefab using Guid(1fc7dfffb398d0b48b056795e222cbc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb420eb71ba6ad224874450f30474977') in 0.040027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai5.prefab
+  artifactKey: Guid(feb7745303eba0d48b6df0b5c664965d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai5.prefab using Guid(feb7745303eba0d48b6df0b5c664965d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983c2daa784befeb567d0f532425d822') in 0.046255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000452 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode2.prefab
+  artifactKey: Guid(bf6ce3cd3c47ff64cb9bcdfc16964bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode2.prefab using Guid(bf6ce3cd3c47ff64cb9bcdfc16964bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf050ab1ecd2c66dfc0e56eb5aeb8c60') in 0.046955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/RainbowExplode.prefab
+  artifactKey: Guid(45a042ad00395204ca3f3561c3a05756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/RainbowExplode.prefab using Guid(45a042ad00395204ca3f3561c3a05756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2da6056733a4e498bc753e8db2b6158') in 0.056721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/52SpecialEffectPack
+  artifactKey: Guid(4f105a4f1e2273e4fbf82842fddcf1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack using Guid(4f105a4f1e2273e4fbf82842fddcf1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deb9d135d8b004712a9d24876f469aaf') in 0.009910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai4.prefab
+  artifactKey: Guid(83847459a29ab814788d190f1fd96e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai4.prefab using Guid(83847459a29ab814788d190f1fd96e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc35def02741cfc75082b73256800f91') in 0.053050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000464 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/StarCore.prefab
+  artifactKey: Guid(244b633c88d21fa43ac7a1b652c14793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/StarCore.prefab using Guid(244b633c88d21fa43ac7a1b652c14793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa6a50a947aa60c5ee19567a3c1b0bc2') in 0.034119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000495 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LaserFire2.prefab
+  artifactKey: Guid(e16ef38aa341c8b4d908e6589cde39b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LaserFire2.prefab using Guid(e16ef38aa341c8b4d908e6589cde39b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c167de7be4f3b94fc76a2fed9d89bfe8') in 0.038789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode3.prefab
+  artifactKey: Guid(ae7c9521250779a428ff1ed3b23c9596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode3.prefab using Guid(ae7c9521250779a428ff1ed3b23c9596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6bd82b4bc01306ea031551ca0eaa396') in 0.039397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Portal.prefab
+  artifactKey: Guid(c98be9ff8d0b99c4f8857faf470634cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Portal.prefab using Guid(c98be9ff8d0b99c4f8857faf470634cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f139e8b83168d7dd0347f37024a93ea') in 0.048781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000466 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LaserFire.prefab
+  artifactKey: Guid(2773c6c2c174c334890f7ce3d5f3d936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LaserFire.prefab using Guid(2773c6c2c174c334890f7ce3d5f3d936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0ae140ef5007ddf17f409d98815c42') in 0.044147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Hole.prefab
+  artifactKey: Guid(7f4cd52014748b049b82f29f755c1278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Hole.prefab using Guid(7f4cd52014748b049b82f29f755c1278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb4fdfbac4194122194ea7324e7b2de4') in 0.035122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/FlameEmission.prefab
+  artifactKey: Guid(aeae58bf37a687647adec1a709ea4bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/FlameEmission.prefab using Guid(aeae58bf37a687647adec1a709ea4bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bd6b1d24580faf86c8a9d1a4a0b5d5') in 0.032791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000473 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall4.prefab
+  artifactKey: Guid(5da4c531ae0085f41b5f5c498270eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalBall4.prefab using Guid(5da4c531ae0085f41b5f5c498270eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759c728dee86b3c498e3046e955d2210') in 0.030576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000544 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/IceCloud.prefab
+  artifactKey: Guid(b97184e0833ffba4ca32beb2bc860a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/IceCloud.prefab using Guid(b97184e0833ffba4ca32beb2bc860a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7656554a59994321c7b3d90ab31350a8') in 0.041619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000460 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/MagicCircleExplode.prefab
+  artifactKey: Guid(ea4ce2b1817aec64f9a23ae028ffe62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/MagicCircleExplode.prefab using Guid(ea4ce2b1817aec64f9a23ae028ffe62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c14826a3ceab5c686767e65172bb37d') in 0.036880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000496 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode6.prefab
+  artifactKey: Guid(738d308a031b2664bb0f9ebcfefb2da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode6.prefab using Guid(738d308a031b2664bb0f9ebcfefb2da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd52e8773b1aa430aa417c4bfbfbfb956') in 0.034722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LightningBall.prefab
+  artifactKey: Guid(8bd82d4797b26664c85cbfa5b50a59c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LightningBall.prefab using Guid(8bd82d4797b26664c85cbfa5b50a59c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef39cb4c5d238402b7464670a1250625') in 0.036610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000451 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/DeadExplode.prefab
+  artifactKey: Guid(bf350f60afaca7e44b4533526bda51c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/DeadExplode.prefab using Guid(bf350f60afaca7e44b4533526bda51c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ab1e5d2341411aeaeeb4e3a089a1866') in 0.033135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000457 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode.prefab
+  artifactKey: Guid(a905d8e5159ffeb46baa8d2a7624717f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode.prefab using Guid(a905d8e5159ffeb46baa8d2a7624717f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d17cdb71c4c68a8f8c8e2962ed486b4') in 0.043916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000495 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/RainbowExplode2.prefab
+  artifactKey: Guid(7da46ba1a42444c44a2260d4a1c9c848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/RainbowExplode2.prefab using Guid(7da46ba1a42444c44a2260d4a1c9c848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1607cf7542a52878f0d16b9940f287bf') in 0.045055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000491 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode10.prefab
+  artifactKey: Guid(4d69b7855b5ece04ab7c1a97402996fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode10.prefab using Guid(4d69b7855b5ece04ab7c1a97402996fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bcb483ca5aeb790d425a96b0c1d538e') in 0.039886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000468 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LightningBall2.prefab
+  artifactKey: Guid(c4b10940b2415844d94a5af346e92ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/LightningBall2.prefab using Guid(c4b10940b2415844d94a5af346e92ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f833607d3229fb67f61021153d9c5914') in 0.044227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai2.prefab
+  artifactKey: Guid(4e354172ca9de2e45b3021f36963f995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Kunai2.prefab using Guid(4e354172ca9de2e45b3021f36963f995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5ff088f3036f6b87265b2c24c4843d') in 0.040034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000462 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SummonMagicCircle.prefab
+  artifactKey: Guid(3aa143f52a2c20e45bf4bc03a7e127fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SummonMagicCircle.prefab using Guid(3aa143f52a2c20e45bf4bc03a7e127fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51e207fa0671bc1c3e4b6896a9453183') in 0.036620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode4.prefab
+  artifactKey: Guid(c0a15d884e5e7a9468ab38bba8a32604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Explode4.prefab using Guid(c0a15d884e5e7a9468ab38bba8a32604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf98105d84288e530cc4f22dc8f22a71') in 0.048972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000460 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/MagicCircleRelease.prefab
+  artifactKey: Guid(fc90607984114ad4b82ab9cecd612f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/MagicCircleRelease.prefab using Guid(fc90607984114ad4b82ab9cecd612f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '009b95904ee0e6cb63c2a447d2cb5a76') in 0.047510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000549 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalArrow.prefab
+  artifactKey: Guid(45cba24a6a5389a4ab385f65964c554a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/ElementalArrow.prefab using Guid(45cba24a6a5389a4ab385f65964c554a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c8fdeddf39a7fcecd4a02727099d02') in 0.053541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000669 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SummonMagicCircle2.prefab
+  artifactKey: Guid(2f18c32efccdebe42b56f6de27c8c92e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/SummonMagicCircle2.prefab using Guid(2f18c32efccdebe42b56f6de27c8c92e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ac29c22f2c9ad041011be759982f30') in 0.052948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000603 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/PoisonExplode.prefab
+  artifactKey: Guid(9d9788338b7ea814dae35d23d4cdd819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/PoisonExplode.prefab using Guid(9d9788338b7ea814dae35d23d4cdd819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e03fb1df1162e072cc9c76d1812a3068') in 0.053065 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000650 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Portal2.prefab
+  artifactKey: Guid(a8d006cd19a6a1b4b95ac07a6075d297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken)/Portal2.prefab using Guid(a8d006cd19a6a1b4b95ac07a6075d297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38d0a997e8399053228107c361baa382') in 0.049860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000626 seconds.
+  path: Assets/52SpecialEffectPack/Effect/Effect(Shuriken)
+  artifactKey: Guid(4656e2e35ad98ab438d282edabe0197a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Effect/Effect(Shuriken) using Guid(4656e2e35ad98ab438d282edabe0197a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '017cbf8075a40be690f7d7e666dc373b') in 0.010774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.457762 seconds.
+  path: Assets/52SpecialEffectPack/Animation&Script
+  artifactKey: Guid(1947f0b7c0ea31040b5138f41eae582b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/52SpecialEffectPack/Animation&Script using Guid(1947f0b7c0ea31040b5138f41eae582b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9334714ffdfad6a25a5fa153d23dcb0a') in 0.014194 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.031077 seconds.
+Registered in 0.030066 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.55 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.34 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.496 seconds
+- Completed reload, in  4.573 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3497ms)
-		BeginReloadAssembly (529ms)
+	ReloadAssembly (4574ms)
+		BeginReloadAssembly (505ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (182ms)
-		EndReloadAssembly (2715ms)
-			LoadAssemblies (502ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1034ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (112ms)
-			SetupLoadedEditorAssemblies (923ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (235ms)
-				ProcessInitializeOnLoadAttributes (612ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (32ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.91 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.3 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3993.
-Total: 10.964700 ms (FindLiveObjects: 0.716700 ms CreateObjectMapping: 0.491100 ms MarkObjects: 9.686400 ms  DeleteObjects: 0.065200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.058576 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.51 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.217 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4219ms)
-		BeginReloadAssembly (484ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (17ms)
+			DisableScriptedObjects (16ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (127ms)
-		EndReloadAssembly (3508ms)
-			LoadAssemblies (404ms)
+		EndReloadAssembly (3774ms)
+			LoadAssemblies (483ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1256ms)
+			SetupTypeCache (1339ms)
 			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (192ms)
-			SetupLoadedEditorAssemblies (1351ms)
+			RebuildScriptCaches (194ms)
+			SetupLoadedEditorAssemblies (1165ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (19ms)
 				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (406ms)
-				ProcessInitializeOnLoadAttributes (858ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (34ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (23ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.44 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.2 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3995.
-Total: 9.954000 ms (FindLiveObjects: 0.554800 ms CreateObjectMapping: 0.392500 ms MarkObjects: 8.928400 ms  DeleteObjects: 0.075500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.028975 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.63 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.991 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3992ms)
-		BeginReloadAssembly (389ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (99ms)
-		EndReloadAssembly (3237ms)
-			LoadAssemblies (550ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1019ms)
-			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (193ms)
-			SetupLoadedEditorAssemblies (1072ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (377ms)
-				ProcessInitializeOnLoadAttributes (617ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
-				AfterProcessingInitializeOnLoad (30ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (445ms)
+				ProcessInitializeOnLoadAttributes (627ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (33ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (20ms)
 Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
 Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.70 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.3 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3997.
-Total: 8.952300 ms (FindLiveObjects: 0.655500 ms CreateObjectMapping: 0.486700 ms MarkObjects: 7.726900 ms  DeleteObjects: 0.080800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.027207 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.22 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.610 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3611ms)
-		BeginReloadAssembly (333ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (72ms)
-		EndReloadAssembly (3064ms)
-			LoadAssemblies (349ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1176ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (181ms)
-			SetupLoadedEditorAssemblies (991ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (272ms)
-				ProcessInitializeOnLoadAttributes (653ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
-				AfterProcessingInitializeOnLoad (22ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
-Platform modules already initialized, skipping
 Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.74 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 1.81 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.3 MB.
-System memory in use after: 175.5 MB.
+Unloading 3406 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.1 MB.
+System memory in use after: 177.3 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3999.
-Total: 7.813200 ms (FindLiveObjects: 0.509900 ms CreateObjectMapping: 0.310900 ms MarkObjects: 6.936900 ms  DeleteObjects: 0.053600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.071321 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.71 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.021 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3022ms)
-		BeginReloadAssembly (311ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (20ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (80ms)
-		EndReloadAssembly (2543ms)
-			LoadAssemblies (276ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (963ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (166ms)
-			SetupLoadedEditorAssemblies (826ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (250ms)
-				ProcessInitializeOnLoadAttributes (516ms)
-				ProcessInitializeOnLoadMethodAttributes (19ms)
-				AfterProcessingInitializeOnLoad (22ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 2.14 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.3 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4001.
-Total: 11.954000 ms (FindLiveObjects: 0.738200 ms CreateObjectMapping: 0.481600 ms MarkObjects: 10.652900 ms  DeleteObjects: 0.078500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.034933 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.80 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.402 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3403ms)
-		BeginReloadAssembly (322ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (101ms)
-		EndReloadAssembly (2905ms)
-			LoadAssemblies (232ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (980ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (219ms)
-			SetupLoadedEditorAssemblies (1025ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (347ms)
-				ProcessInitializeOnLoadAttributes (615ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (22ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (18ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.3 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4003.
-Total: 8.070900 ms (FindLiveObjects: 0.476300 ms CreateObjectMapping: 0.331100 ms MarkObjects: 7.211200 ms  DeleteObjects: 0.050500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015841 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.679 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1680ms)
-		BeginReloadAssembly (207ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (62ms)
-		EndReloadAssembly (1384ms)
-			LoadAssemblies (173ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (507ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (79ms)
-			SetupLoadedEditorAssemblies (517ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (123ms)
-				ProcessInitializeOnLoadAttributes (363ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (11ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'Distant Lands/Stylized Terrain First Pass': dependency 'BaseMapShader' shader 'Distant Lands/Stylized Terrain' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Nature/Terrain/StylizedTerrain': dependency 'AddPassShader' shader 'ASESampleShaders/Terrain/SimpleTerrainAddPass' not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3366 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.3 MB.
-System memory in use after: 175.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4005.
-Total: 6.868200 ms (FindLiveObjects: 0.367000 ms CreateObjectMapping: 0.191300 ms MarkObjects: 6.276200 ms  DeleteObjects: 0.032500 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 4016.
+Total: 8.591600 ms (FindLiveObjects: 0.615900 ms CreateObjectMapping: 0.571700 ms MarkObjects: 7.280800 ms  DeleteObjects: 0.120600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

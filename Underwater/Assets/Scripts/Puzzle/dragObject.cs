@@ -42,6 +42,7 @@ public class dragObject : MonoBehaviour
                         transform.position = box.transform.position;
                         puzzleManager.Instance.currentBoxCount++;
                         this.enabled = false;
+                        puzzleManager.Instance.checkCompleteness();
                         Destroy(this);
                     }
                     else

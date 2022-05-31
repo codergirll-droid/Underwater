@@ -14,6 +14,46 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public int killedEnemyNumber = 0;
+    public bool isPuzzleSolved = false;
+    public bool isBossKilled = false;
+
+
+    private void Update()
+    {
+        if(killedEnemyNumber >= 5 && SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            GameObject.Find("portal").GetComponent<MeshRenderer>().enabled = true;
+            GameObject.Find("portal").transform.GetChild(0).gameObject.SetActive(true);
+        }else if(isPuzzleSolved && SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            GameObject.Find("portal").GetComponent<MeshRenderer>().enabled = true;
+            GameObject.Find("portal").transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else if(isBossKilled)
+        {
+            //YOU WON THE GAME
+            Debug.Log("CONGRAGULATIONS, YOU TURNED HOME!");
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (Cursor.visible)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true
+                    ;
+            }
+        }
+
+    }
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -29,6 +69,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         //PlayerPrefs.DeleteAll();
         //PlayerPrefs.DeleteAll();
 
@@ -106,7 +150,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    IEnumerator playerPosCoroutine()
+    public IEnumerator playerPosCoroutine()
     {
 
         yield return new WaitForSeconds(0.001f);

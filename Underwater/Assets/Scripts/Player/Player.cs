@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour
 
     float bulletSpeed = 50;
 
+    public TMP_Text missionTxt;
+
     private void Start()
     {
 
@@ -48,11 +51,49 @@ public class Player : MonoBehaviour
 
         PlayerHUDController.Instance.breathSlider.value = breath;
         PlayerHUDController.Instance.healthSlider.value = health;
+
+        if( activeSceneIndex == 0)
+        {
+            missionTxt.text = "Kill 5 enemies to open the portal.";
+        }else if(activeSceneIndex == 1)
+        {
+            missionTxt.text = "Find the red puzzle box and solve the puzzle to open the portal.";
+        }else if(activeSceneIndex == 2)
+        {
+            missionTxt.text = "Kill the boss to go home.";
+
+        }
+        else
+        {
+            missionTxt.text = "";
+
+        }
+
     }
 
 
     private void Update()
     {
+        activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (activeSceneIndex == 0)
+        {
+            missionTxt.text = "Kill 5 enemies to open the portal.";
+        }
+        else if (activeSceneIndex == 1)
+        {
+            missionTxt.text = "Find the red puzzle box and solve the puzzle to open the portal.";
+        }
+        else if (activeSceneIndex == 2)
+        {
+            missionTxt.text = "Kill the boss to go home.";
+
+        }
+        else
+        {
+            missionTxt.text = "";
+
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             addHealth(10);
@@ -234,6 +275,13 @@ public class Player : MonoBehaviour
 
 
         }
+
+        if (other.gameObject.CompareTag("puzzle"))
+        {
+            SceneManager.LoadScene(4);
+            this.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        }
+
     }
 
     void Shoot()
@@ -260,8 +308,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    
-    
+
+
 
     IEnumerator increaseHealthContinuously(int healthValue)
     {
